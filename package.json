@@ -9,6 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "DawnyWu",
+  "Editor": "James Bernard",
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.3.26",

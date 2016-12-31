@@ -62,7 +62,7 @@ const ScrollContainer = React.createClass({
   handleTouchMove(e){
     if(this.state.touchControl === true){return}
     console.log('touch move')
-    let direction = e.touches[0].screenY < this.state.touchStart ? 'down' : 'up' 
+    let direction = e.touches[0].screenY < this.state.touchStart ? 'down' : 'up'
 
     // console.log('111111', this.atHead() && direction == 'up')
     // console.log('222222', this.atEnd() && direction == 'down')
@@ -90,7 +90,7 @@ const ScrollContainer = React.createClass({
       this.setState({touchControl: true})
     }
   },
-  
+
   atHead(){
     return this.state.active === 0
   },
@@ -117,8 +117,8 @@ const ScrollContainer = React.createClass({
         <ul className={styles.onepagePagination}>
           {_.map( _.times(this.props.children.length, Number), (i) => {
             return(
-              <li>
-                <a className={this.state.active === i ? styles.active : "" }
+              <li className="sectionSelector">
+                <a id={i} className={this.state.active === i ? styles.active : ""}
                    onClick={this.handleLinkClick.bind(this, i)}>
                 </a>
               </li>
